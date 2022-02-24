@@ -16,7 +16,7 @@ class TrackingInfo(dict):
         service (str):            description of the carrier's service used
     """
 
-    def __init__(self, tracking_number, delivery_date, status, last_update, location=None, delivery_detail=None, service=None):
+    def __init__(self, tracking_number, delivery_date, status, last_update, location=None, delivery_detail=None, service=None, weight=None):
 
         self.events = []
 
@@ -33,6 +33,7 @@ class TrackingInfo(dict):
 
         # service type, i.e. FedEx Ground, UPS Basic, etc.
         self.service = service
+        self.weight = weight
 
 
     def __repr__(self):

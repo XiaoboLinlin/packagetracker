@@ -1,6 +1,7 @@
 
 import json
 import logging
+# from matplotlib.font_manager import _Weight
 import requests
 from datetime import datetime
 
@@ -275,6 +276,7 @@ class UPSInterface(BaseInterface):
             location        = last_location,
             delivery_detail = delivery_detail,
             service         = service_description,
+            weight          = root['Shipment']['ShipmentWeight']['Weight']
         )
 
         # add a single event, UPS doesn't seem to support multiple?
